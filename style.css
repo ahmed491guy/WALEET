@@ -127,12 +127,12 @@ h2 {
 }
 
 #transaction-list::-webkit-scrollbar-track {
-  /* track is the bg of the scrollbar */
+  /* track is scrollbar */
   background-color: #f1f1f1;
   border-radius: 4px;
 }
 #transaction-list::-webkit-scrollbar-thumb {
-  /* thumb is the draggble part of the scrollbar */
+  /* thumb is  draggble part of the scrollbar */
   background-color: #cbd5e0;
   border-radius: 4px;
 }
