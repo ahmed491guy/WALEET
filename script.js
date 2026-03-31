@@ -13,7 +13,6 @@ transactionFormEl.addEventListener("submit", addTransaction);
 function addTransaction(e) {
   e.preventDefault();
 
-  // get form values
   const description = descriptionEl.value.trim();
   const amount = parseFloat(amountEl.value);
 
@@ -71,7 +70,7 @@ function updateSummary() {
     .filter((transaction) => transaction.amount < 0)
     .reduce((acc, transaction) => acc + transaction.amount, 0);
 
-  // update ui => todo: fix the formatting
+  // update ui 
   balanceEl.textContent = formatCurrency(balance);
   incomeAmountEl.textContent = formatCurrency(income);
   expenseAmountEl.textContent = formatCurrency(expenses);
@@ -94,6 +93,6 @@ function removeTransaction(id) {
   updateSummary();
 }
 
-// initial render
+
 updateTransactionList();
 updateSummary();
