@@ -96,3 +96,4 @@ function removeTransaction(id) {
 
 updateTransactionList();
 updateSummary();
+
