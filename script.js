@@ -59,7 +59,7 @@ function createTransactionElement(transaction) {
 }
 
 function updateSummary() {
-  // 100, -50, 200, -200 => 50
+
   const balance = transactions.reduce((acc, transaction) => acc + transaction.amount, 0);
 
   const income = transactions
@@ -70,7 +70,7 @@ function updateSummary() {
     .filter((transaction) => transaction.amount < 0)
     .reduce((acc, transaction) => acc + transaction.amount, 0);
 
-  // update ui 
+
   balanceEl.textContent = formatCurrency(balance);
   incomeAmountEl.textContent = formatCurrency(income);
   expenseAmountEl.textContent = formatCurrency(expenses);
@@ -84,7 +84,7 @@ function formatCurrency(number) {
 }
 
 function removeTransaction(id) {
-  // filter out the one we wanted to delete
+
   transactions = transactions.filter((transaction) => transaction.id !== id);
 
   localStorage.setItem("transcations", JSON.stringify(transactions));
